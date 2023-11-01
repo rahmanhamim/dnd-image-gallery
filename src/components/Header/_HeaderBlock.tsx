@@ -3,7 +3,7 @@ import CheckboxIcon from "../Icons/CheckboxIcon";
 import EmptyCheckboxIcon from "../Icons/EmptyCheckboxIcon";
 
 interface IHeaderProps {
-  onDelete: () => void;
+  onDelete: (selectedItems: IImageGallery[]) => void;
   galleryData: IImageGallery[];
 }
 
@@ -20,13 +20,22 @@ const HeaderBlock = ({ onDelete, galleryData }: IHeaderProps) => {
             ) : (
               <EmptyCheckboxIcon />
             )}
-            <span>{selectedItems.length} File Selected</span>
+            <span>
+              {selectedItems.length > 1
+                ? `${selectedItems.length} Files Selected`
+                : `${selectedItems.length} File Selected`}
+            </span>
           </h2>
           <button
             className="font-semibold text-red-500 text-lg"
-            onClick={onDelete}
+            onClick={
+              selectedItems.length > 0
+                ? () => onDelete(selectedItems)
+                : () => {}
+            }
           >
-            Delete File
+            {/* if one file then show Delete File otherwise Delete Files */}
+            {selectedItems.length > 1 ? `Delete Files` : "Delete File"}
           </button>
         </>
       ) : (

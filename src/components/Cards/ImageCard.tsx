@@ -18,7 +18,7 @@ const ImageCard = ({
   return (
     <div
       className={twMerge(
-        "relative rounded-lg overflow-hidden border group",
+        "relative rounded-lg overflow-hidden border border-gray-300 group",
         className,
         isSelected && "opacity-60"
       )}

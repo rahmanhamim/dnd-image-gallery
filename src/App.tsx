@@ -108,10 +108,9 @@ function App() {
                 items={galleryData}
                 strategy={rectSortingStrategy}
               >
-                {galleryData.map((imageItem, index) => {
+                {galleryData.map((imageItem) => {
                   return (
                     <ImageCard
-                      className={index === 0 ? "row-span-2 col-span-2" : ""}
                       key={imageItem.id}
                       id={imageItem.id}
                       isFeatured={imageItem.isFeatured}
@@ -124,7 +123,7 @@ function App() {
               </SortableContext>
               <AddImageCard />
 
-              <DragOverlay adjustScale={true}>
+              <DragOverlay adjustScale={true} wrapperElement="div">
                 {activeItem ? (
                   <ImageOverlayCard
                     className="absolute z-50 h-full w-full"

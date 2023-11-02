@@ -24,13 +24,34 @@ const ImageCard = ({
     transform,
     transition,
     isDragging,
+    index,
+    activeIndex,
+    overIndex,
+    newIndex,
+    active,
+    rect,
+    over,
+    isSorting,
   } = useSortable({ id: id });
+
+  if (isSorting) {
+    console.log({
+      activeIndex,
+      overIndex,
+      newIndex,
+      active,
+      rect,
+      over,
+    });
+  }
 
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
     zIndex: isDragging ? "100" : "auto",
     opacity: isDragging ? 0.3 : 1,
+    gridRow: index === 0 ? "span 2" : "span 1",
+    gridColumn: index === 0 ? "span 2" : "span 1",
   };
 
   return (

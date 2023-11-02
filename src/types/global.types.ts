@@ -1,5 +1,5 @@
 export interface IImageGallery {
-  id: string;
+  id: number | string;
   slug: string;
   isFeatured: boolean;
   isSelected: boolean;

@@ -124,7 +124,7 @@ function App() {
               </SortableContext>
               <AddImageCard />
 
-              <DragOverlay>
+              <DragOverlay adjustScale={true}>
                 {activeItem ? (
                   <ImageOverlayCard
                     className="absolute z-50 h-full w-full"
@@ -141,36 +141,3 @@ function App() {
 }
 
 export default App;
-
-/* <div className="grid grid-cols-5 gap-8 p-8">
-            {galleryData.map((imageItem, index) => (
-              <ImageCard
-                className={index === 0 ? "row-span-2 col-span-2" : ""}
-                key={imageItem.id}
-                id={imageItem.id}
-                isFeatured={imageItem.isFeatured}
-                isSelected={imageItem.isSelected}
-                slug={imageItem.slug}
-                onClick={handleSelectImage}
-              />
-            ))}
-            <AddImageCard />
-          </div> 
-          
-          
-          
-          
-          
-           <ImageCard
-                      className={index === 0 ? "row-span-2 col-span-2" : ""}
-                      key={item.id}
-                      id={item.id}
-                      isSelected={item.isSelected}
-                      slug={item.slug}
-                      onClick={handleSelectImage}
-                      isFeatured={item.isFeatured}
-                    />
-          
-          
-          
-          */

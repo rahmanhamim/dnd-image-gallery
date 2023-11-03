@@ -121,7 +121,7 @@ function App() {
                   );
                 })}
               </SortableContext>
-              <AddImageCard />
+              <AddImageCard setGalleryData={setGalleryData} />
 
               <DragOverlay adjustScale={true} wrapperElement="div">
                 {activeItem ? (

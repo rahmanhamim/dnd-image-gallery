@@ -68,8 +68,17 @@ const ImageCard = ({
           <EmptyCheckboxIcon className="" />
         )}
       </button>
-      <div className={isSelected ? "opacity-60" : ""}>
-        <img src={slug} alt={slug} className="block" />
+      <div
+        className={twMerge(
+          "flex items-center justify-center h-full",
+          isSelected && "opacity-60"
+        )}
+      >
+        <img
+          src={slug}
+          alt={slug}
+          className="block h-full w-full object-cover"
+        />
       </div>
     </div>
   );

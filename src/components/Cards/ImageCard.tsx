@@ -61,20 +61,18 @@ const ImageCard = ({
       style={style}
       className={twMerge(
         "relative rounded-lg overflow-hidden border border-gray-300 group z-0",
-        className,
-        isSelected && "!opacity-60"
+        className
+        // isSelected && "!opacity-60"
       )}
     >
       <button
         {...listeners}
         {...attributes}
         className={twMerge(
-          "absolute inset-0 bg-black transition-opacity duration-500 opacity-0 group-hover:opacity-20",
+          "absolute inset-0 bg-black transition-opacity duration-500 z-50 opacity-0 group-hover:opacity-40",
           isSelected && "!opacity-0"
         )}
-      >
-        Drag handle
-      </button>
+      />
       <button
         className={twMerge(
           "absolute top-2 z-50 left-2 group-hover:opacity-100 transition-opacity duration-500",
@@ -89,7 +87,7 @@ const ImageCard = ({
           <EmptyCheckboxIcon className="" />
         )}
       </button>
-      <div>
+      <div className={isSelected ? "opacity-60" : ""}>
         <img src={slug} alt={slug} className="block" />
       </div>
     </div>

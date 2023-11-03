@@ -27,7 +27,7 @@ const HeaderBlock = ({ onDelete, galleryData }: IHeaderProps) => {
             </span>
           </h2>
           <button
-            className="font-semibold text-red-500 text-base md:text-lg"
+            className="font-semibold text-red-500 text-base md:text-lg hover:underline"
             onClick={
               selectedItems.length > 0
                 ? () => onDelete(selectedItems)

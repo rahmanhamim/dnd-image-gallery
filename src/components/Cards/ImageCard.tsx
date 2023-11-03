@@ -84,7 +84,7 @@ const ImageCard = ({
         onClick={onClick && (() => onClick(id))}
       >
         {isSelected ? (
-          <CheckboxIcon className="" />
+          <CheckboxIcon className="text-blue-600" />
         ) : (
           <EmptyCheckboxIcon className="" />
         )}
@@ -97,42 +97,3 @@ const ImageCard = ({
 };
 
 export default ImageCard;
-
-/* 
-div
-      style={style}
-      ref={setNodeRef}
-      {...listeners}
-      {...attributes}
-      className={twMerge(
-        "relative rounded-lg overflow-hidden border border-gray-300 group z-0",
-        className,
-        isSelected && "opacity-60"
-      )}
-    >
-      <div
-        className={twMerge(
-          "absolute inset-0 bg-black transition-opacity duration-500 pointer-events-none opacity-0 group-hover:opacity-20",
-          isSelected && "!opacity-0"
-        )}
-      />
-
-      <button
-        className={twMerge(
-          "absolute top-2 z-50 left-2 group-hover:opacity-100 transition-opacity duration-500",
-          isSelected && "!opacity-100",
-          !isSelected && "opacity-0"
-        )}
-        onClick={onClick && (() => onClick(id))}
-      >
-        {isSelected ? (
-          <CheckboxIcon className="" />
-        ) : (
-          <EmptyCheckboxIcon className="" />
-        )}
-      </button>
-      <img src={slug} alt={slug} className="block" />
-    </div>
-
-
-*/

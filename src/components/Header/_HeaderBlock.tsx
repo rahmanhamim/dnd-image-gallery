@@ -16,7 +16,7 @@ const HeaderBlock = ({ onDelete, galleryData }: IHeaderProps) => {
         <>
           <h2 className="text-lg md:text-2xl font-semibold text-gray-800 flex items-center gap-2">
             {selectedItems.length > 0 ? (
-              <CheckboxIcon />
+              <CheckboxIcon className="text-blue-600" />
             ) : (
               <EmptyCheckboxIcon />
             )}

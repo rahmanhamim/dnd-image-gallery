@@ -52,6 +52,7 @@ const ImageCard = ({
     opacity: isDragging ? 0.3 : 1,
     gridRow: index === 0 ? "span 2" : "span 1",
     gridColumn: index === 0 ? "span 2" : "span 1",
+    transformOrigin: "0 0",
   };
 
   return (

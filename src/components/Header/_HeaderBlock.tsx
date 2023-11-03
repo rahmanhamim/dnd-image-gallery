@@ -14,7 +14,7 @@ const HeaderBlock = ({ onDelete, galleryData }: IHeaderProps) => {
     <div className="flex items-center justify-between gap-4 p-5">
       {selectedItems.length > 0 ? (
         <>
-          <h2 className="text-2xl font-semibold text-gray-800 flex items-center gap-2">
+          <h2 className="text-lg md:text-2xl font-semibold text-gray-800 flex items-center gap-2">
             {selectedItems.length > 0 ? (
               <CheckboxIcon />
             ) : (
@@ -27,7 +27,7 @@ const HeaderBlock = ({ onDelete, galleryData }: IHeaderProps) => {
             </span>
           </h2>
           <button
-            className="font-semibold text-red-500 text-lg"
+            className="font-semibold text-red-500 text-base md:text-lg"
             onClick={
               selectedItems.length > 0
                 ? () => onDelete(selectedItems)

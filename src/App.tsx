@@ -4,7 +4,6 @@ import HeaderBlock from "./components/Header/_HeaderBlock";
 import { initialImageData } from "./data";
 import ImageCard from "./components/Cards/ImageCard";
 import { IImageGallery } from "./types/global.types";
-// import AddImageCard from "./components/Cards/AddImageCard";
 import {
   DndContext,
   KeyboardSensor,
@@ -15,6 +14,7 @@ import {
   DragEndEvent,
   DragStartEvent,
   DragOverlay,
+  TouchSensor,
 } from "@dnd-kit/core";
 import {
   arrayMove,
@@ -60,7 +60,8 @@ function App() {
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-    })
+    }),
+    useSensor(TouchSensor)
   );
 
   const handleDragStart = (event: DragStartEvent) => {
@@ -101,9 +102,8 @@ function App() {
             collisionDetection={closestCenter}
             onDragStart={handleDragStart}
             onDragEnd={handleDragEnd}
-            // onDragOver={(event) => console.log("drag over", event)}
           >
-            <div className="grid grid-cols-5 gap-8 p-8">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 p-8">
               <SortableContext
                 items={galleryData}
                 strategy={rectSortingStrategy}

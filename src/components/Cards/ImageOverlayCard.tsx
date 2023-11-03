@@ -1,4 +1,3 @@
-import React from "react";
 import { IImageGallery } from "../../types/global.types";
 import { twMerge } from "tailwind-merge";
 

@@ -53,7 +53,7 @@ function App() {
     setGalleryData(newGalleryData);
   };
 
-  // DND KIT CODE STARTS HERE
+  // DND CODE STARTS HERE
   const [activeItem, setActiveItem] = useState<IImageGallery | null>(null);
 
   const sensors = useSensors(

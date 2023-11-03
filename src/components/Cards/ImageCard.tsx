@@ -44,7 +44,6 @@ const ImageCard = ({
       className={twMerge(
         "relative rounded-lg overflow-hidden border border-gray-300 group z-0",
         className
-        // isSelected && "!opacity-60"
       )}
     >
       <button

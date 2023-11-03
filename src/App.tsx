@@ -113,7 +113,6 @@ function App() {
                     <ImageCard
                       key={imageItem.id}
                       id={imageItem.id}
-                      isFeatured={imageItem.isFeatured}
                       isSelected={imageItem.isSelected}
                       slug={imageItem.slug}
                       onClick={handleSelectImage}

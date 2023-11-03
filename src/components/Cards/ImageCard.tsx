@@ -25,25 +25,7 @@ const ImageCard = ({
     transition,
     isDragging,
     index,
-    activeIndex,
-    overIndex,
-    newIndex,
-    active,
-    rect,
-    over,
-    isSorting,
   } = useSortable({ id: id });
-
-  if (isSorting) {
-    console.log({
-      activeIndex,
-      overIndex,
-      newIndex,
-      active,
-      rect,
-      over,
-    });
-  }
 
   const style = {
     transform: CSS.Transform.toString(transform),

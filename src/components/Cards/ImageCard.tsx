@@ -42,7 +42,7 @@ const ImageCard = ({
       ref={setNodeRef}
       style={style}
       className={twMerge(
-        "relative rounded-lg overflow-hidden border border-gray-300 group z-0",
+        "relative rounded-lg overflow-hidden border border-gray-300 group z-0 aspect-square object-cover",
         className
       )}
     >

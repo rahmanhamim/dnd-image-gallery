@@ -39,7 +39,7 @@ const HeaderBlock = ({ onDelete, galleryData }: IHeaderProps) => {
           </button>
         </>
       ) : (
-        <p className="text-2xl font-semibold text-gray-800">Gallery</p>
+        <p className="text-2xl font-semibold text-gray-800">Showcase</p>
       )}
     </div>
   );
